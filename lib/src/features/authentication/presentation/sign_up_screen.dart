@@ -3,6 +3,7 @@ import 'package:sarang_app/src/common_widgets/banner_widget.dart';
 import 'package:sarang_app/src/common_widgets/button_widget.dart';
 import 'package:sarang_app/src/common_widgets/custom_text_field_widget.dart';
 import 'package:sarang_app/src/common_widgets/custom_text_widget.dart';
+import 'package:sarang_app/src/features/authentication/presentation/sign_up_age_screen.dart';
 import 'package:sarang_app/src/themes_manager/values_manager.dart';
 class SignUpScreen extends StatefulWidget {
   static const routeName = '/sign_up';
@@ -57,7 +58,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
               ButtonWidget(
                 title: 'Get Started',
-                onTap: (){},
+                onTap: (){
+                  Navigator.pushNamed(context, SignUpAgeScreen.ageScreenRoute); ///untuk berpindah ke halaman lain menggunakan route
+                },
               ),
 
               const SizedBox(
